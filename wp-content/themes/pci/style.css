@@ -1,0 +1,69 @@
+/*
+Theme Name: PCI
+Description: PCI Theme
+Author: Marco
+Template: twentyseventeen
+Version: 0.0.1
+Text Domain: pci
+*/
+
+
+
+@media screen and (min-width: 48em) {
+    .navigation-top {
+        top: 0;
+        text-transform: uppercase;
+        bottom: auto;                
+    }
+
+    .main-navigation a {
+        padding: 1em 3em;
+    }
+
+    #top-menu {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 67em) {
+
+    .colors-dark .navigation-top.pci-custom, 
+    .colors-dark .navigation-top.pci-custom #top-menu {
+        background: transparent;
+        border-bottom-color: #eee;
+    }
+
+    .navigation-top .wrap{
+        padding: 1.75em 2em    
+    }
+
+    .navigation-top.navigation-top.site-navigation-fixed {
+        background-color: rgba(24,22,22,1);        
+        border-bottom-color: transparent;
+    }
+
+    .navigation-top.pci-custom.site-navigation-fixed{
+        border-color:none;
+    }
+
+    .navigation-top.site-navigation-fixed .wrap{
+        padding: 0.75em 2em;        
+    }
+}
+
+@media screen and (min-width: 30em) {
+    .page-one-column .panel-content .wrap {
+        max-width: 1200px;
+    }
+
+    .page-one-column .panel-content .wrap .entry-header,
+    .page-one-column .panel-content .wrap .entry-content h2 {
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .page-one-column .panel-content .wrap .entry-header .entry-title{
+        font-size: 3em;
+    }
+
+}
