@@ -7,7 +7,29 @@ Version: 0.0.1
 Text Domain: pci
 */
 
+/**
+ * TODO: inserire le regole in media query
+ */
+.colors-dark .stagione .season-img img {
+    -webkit-box-shadow: 1.25rem 1.375rem 2rem 0 rgba(0,0,0,.92);
+    -moz-box-shadow: 1.25rem 1.375rem 2rem 0 rgba(0,0,0,.92);
+    box-shadow: 1.25rem 1.375rem 2rem 0 rgba(0,0,0,.92);
+}
 
+.season-item-caption {
+    font-weight: 200;
+    margin-bottom:0.2em;
+}
+
+.season-item-desc {
+    font-size: .85rem;
+}
+
+.colors-dark hr.season-sep {
+    margin-top: 1em;
+    margin-left: 0;
+    background-color:orange;
+}
 
 @media screen and (min-width: 48em) {
     .navigation-top {
@@ -31,6 +53,12 @@ Text Domain: pci
     .colors-dark .navigation-top.pci-custom #top-menu {
         background: transparent;
         border-bottom-color: #eee;
+    }
+
+    .colors-dark .stagione .featured-season a img {
+        -webkit-box-shadow: 1.25rem 1.375rem 2rem 0 rgba(0,0,0,.92);
+        -moz-box-shadow: 1.25rem 1.375rem 2rem 0 rgba(0,0,0,.92);
+        box-shadow: 1.25rem 1.375rem 2rem 0 rgba(0,0,0,.92);
     }
 
     .navigation-top .wrap{
