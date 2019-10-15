@@ -16,6 +16,16 @@ Text Domain: pci
     box-shadow: 1.25rem 1.375rem 2rem 0 rgba(0,0,0,.92);
 }
 
+@media screen and (min-width: 30em) {
+    .page-one-column .panel-content .wrap .entry-header .entry-title.pci-section {
+        font-weight: 600;
+        letter-spacing: -5px;
+        font-size: 4.5em;
+        font-family: 'Oswald', sans-serif;
+    }
+}
+
+
 .season-item-caption {
     font-weight: 200;
     margin-bottom:0.2em;
