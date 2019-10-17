@@ -25,6 +25,12 @@ Text Domain: pci
     }
 }
 
+.has-header-image.twentyseventeen-front-page .site-branding {
+    vertical-align: middle;
+}
+
+.wrap {text-align: center;}
+
 
 .season-item-caption {
     font-weight: 200;
