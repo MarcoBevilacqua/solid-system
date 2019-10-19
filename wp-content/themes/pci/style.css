@@ -16,6 +16,10 @@ Text Domain: pci
     box-shadow: 1.25rem 1.375rem 2rem 0 rgba(0,0,0,.92);
 }
 
+.has-header-image .custom-header-media img, .has-header-video .custom-header-media video, .has-header-image:not(.twentyseventeen-front-page):not(.home) .custom-header-media img {
+    object-fit: scale-down;
+}
+
 @media screen and (min-width: 30em) {
     .page-one-column .panel-content .wrap .entry-header .entry-title.pci-section {
         font-weight: 600;
@@ -48,6 +52,11 @@ Text Domain: pci
 }
 
 @media screen and (min-width: 48em) {
+
+    .entry-header.pci-custom {
+        min-height: 200px;
+    }
+
     .navigation-top {
         top: 0;
         text-transform: uppercase;
