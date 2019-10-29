@@ -20,6 +20,16 @@ Text Domain: pci
     object-fit: scale-down;
 }
 
+.has-header-image .custom-header-media img, .has-header-video .custom-header-media video, 
+.has-header-image:not(.twentyseventeen-front-page):not(.home) .custom-header-media img {
+    height: 85%;
+    top:15%;
+}
+
+.entry-content .has-very-light-gray-color {
+    text-align: left;
+}
+
 @media screen and (min-width: 30em) {
     .page-one-column .panel-content .wrap .entry-header .entry-title.pci-section {
         font-weight: 600;
@@ -43,6 +53,7 @@ Text Domain: pci
 
 .season-item-desc {
     font-size: .85rem;
+    text-align: left;
 }
 
 .colors-dark hr.season-sep {
@@ -54,7 +65,7 @@ Text Domain: pci
 @media screen and (min-width: 48em) {
 
     .entry-header.pci-custom {
-        min-height: 200px;
+        min-height: 100px;
     }
 
     .navigation-top {
