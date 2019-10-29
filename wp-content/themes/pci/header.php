@@ -28,7 +28,10 @@
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<?php get_template_part( 'template-parts/header/header', 'image' ); ?>
+		<?php if(!is_single() ) :
+			get_template_part( 'template-parts/header/header', 'image' ); 
+			endif
+			?>
 
 		<?php if ( has_nav_menu( 'top' ) ) : ?>
 			<div class="navigation-top pci-custom">
