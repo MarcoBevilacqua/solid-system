@@ -31,6 +31,10 @@ Text Domain: pci
     text-align: left;
 }
 
+.entry-header.entry-header-pci h1{
+    font-size: 3.5em;
+}
+
 @media screen and (min-width: 30em) {
     .page-one-column .panel-content .wrap .entry-header .entry-title.pci-section {
         font-weight: 600;
