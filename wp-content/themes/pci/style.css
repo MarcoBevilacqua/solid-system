@@ -27,12 +27,33 @@ Text Domain: pci
     top:15%;
 }
 
+.wp-block-media-text.has-media-on-the-right.two-third {
+    grid-template-columns: 75% auto;
+}
+
 .entry-content .has-very-light-gray-color {
     text-align: left;
 }
 
 .entry-header.entry-header-pci h1{
     font-size: 3.5em;
+}
+
+/** CUSTOM POST TYPE */
+body:not(.twentyseventeen-front-page) .entry-content{
+    display: grid;
+    grid-template-columns: repeat( 2fr, 1fr );
+
+}
+
+body:not(.twentyseventeen-front-page) .entry-content .post-text{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+body:not(.twentyseventeen-front-page) .entry-content .post-img{
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
 @media screen and (min-width: 30em) {

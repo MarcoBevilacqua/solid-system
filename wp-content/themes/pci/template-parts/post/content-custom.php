@@ -51,23 +51,35 @@
 	<?php endif; ?>
 
 	<div class="entry-content">
+		<div class="post-text">
+			<?php the_content(  ) ?>
+		</div>
+		<div class="post-img">
+			<?php 
+				if ( ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) && has_post_thumbnail( get_queried_object_id() ) ) :
+					echo '<div class="single-featured-image-header">';
+					echo get_the_post_thumbnail( get_queried_object_id(), 'twentyseventeen-featured-image' );
+					echo '</div><!-- .single-featured-image-header -->';
+				endif;
+			?>
+		</div>
 		<?php
 		/* translators: %s: Name of current post */
-		the_content(
-			sprintf(
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
-				get_the_title()
-			)
-		);
+		// the_content(
+		// 	sprintf(
+		// 		__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
+		// 		get_the_title()
+		// 	)
+		// );
 
-		wp_link_pages(
-			array(
-				'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
-				'after'       => '</div>',
-				'link_before' => '<span class="page-number">',
-				'link_after'  => '</span>',
-			)
-		);
+		// wp_link_pages(
+		// 	array(
+		// 		'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
+		// 		'after'       => '</div>',
+		// 		'link_before' => '<span class="page-number">',
+		// 		'link_after'  => '</span>',
+		// 	)
+		// );
 		?>
 	</div><!-- .entry-content -->
 
