@@ -58,30 +58,25 @@
 			<?php 
 				if ( ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) && has_post_thumbnail( get_queried_object_id() ) ) :
 					echo '<div class="single-featured-image-header">';
-					echo get_the_post_thumbnail( get_queried_object_id(), 'twentyseventeen-featured-image' );
+					echo get_the_post_thumbnail( get_queried_object_id());
 					echo '</div><!-- .single-featured-image-header -->';
 				endif;
 			?>
 		</div>
 		<?php
-		/* translators: %s: Name of current post */
-		// the_content(
-		// 	sprintf(
-		// 		__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
-		// 		get_the_title()
-		// 	)
-		// );
-
-		// wp_link_pages(
-		// 	array(
-		// 		'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
-		// 		'after'       => '</div>',
-		// 		'link_before' => '<span class="page-number">',
-		// 		'link_after'  => '</span>',
-		// 	)
-		// );
 		?>
 	</div><!-- .entry-content -->
+	<div class="entry-content-footer"><!-- .entry-content-below -->
+		<div class="footer">
+			<h3 class="date-title"><i class="fa fa-2x fa-calendar"></i>Date</h3>
+			<?php 
+				$dates = explode(",", get_field('data', false, false));				
+				foreach ($dates as $key => $date) {				
+					echo "<span class=\"date-single\">" . $date . "</span>";
+				}			
+			?>
+		</div>				
+	</div><!-- .entry-content-below --> 
 
 	<?php
 	if ( is_single() ) {

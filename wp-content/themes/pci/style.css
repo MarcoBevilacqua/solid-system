@@ -42,18 +42,53 @@ Text Domain: pci
 /** CUSTOM POST TYPE */
 body:not(.twentyseventeen-front-page) .entry-content{
     display: grid;
-    grid-template-columns: repeat( 2fr, 1fr );
-
+    grid-template-columns: repeat( 3, 1fr );    
+    grid-template-rows: repeat(2fr);   
 }
 
 body:not(.twentyseventeen-front-page) .entry-content .post-text{
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    padding-top: 10px 15px;
 }
 
 body:not(.twentyseventeen-front-page) .entry-content .post-img{
-    grid-column-start: 2;
+    grid-column-start: 3;
     grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+body:not(.twentyseventeen-front-page) .entry-content-footer{
+    display: grid;
+    grid-template-columns: repeat( 3, 1fr ); 
+}
+
+body:not(.twentyseventeen-front-page) .entry-content-footer .footer{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.entry-content-footer .footer .date-single{
+    background-color: #fff;
+    padding:10px;
+    color: #222; 
+    border-radius: 2px;    
+    margin: auto 5px;
+}
+
+.entry-content-footer .footer .date-single:first-of-type{    
+    margin-left: 0;
+}
+
+.colors-dark .single-featured-image-header {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    background-color: #2b2b2b;
+    border-bottom-color: #2b2b2b;
+    padding: 15px 10px;
 }
 
 @media screen and (min-width: 30em) {
