@@ -18,7 +18,7 @@
 		echo twentyseventeen_get_svg( array( 'icon' => 'thumb-tack' ) );
 	endif;
 	?>
-	<header class="entry-header marco">
+	<header class="entry-header">
 		<?php
 		if ( 'post' === get_post_type() ) {
 			echo '<div class="entry-meta">';

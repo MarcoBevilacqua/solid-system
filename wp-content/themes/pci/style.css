@@ -10,6 +10,16 @@ Text Domain: pci
 /**
  * TODO: inserire le regole in media query
  */
+
+ .post-cstm-img{
+    max-width: 30vw;
+    position: fixed;
+    top: 10vh;
+    right: 50%;
+    max-height: 90vh;
+    width: auto;
+ }
+
 .colors-dark .season-img img {
     -webkit-box-shadow: 1.25rem 1.375rem 2rem 0 rgba(0,0,0,.92);
     -moz-box-shadow: 1.25rem 1.375rem 2rem 0 rgba(0,0,0,.92);
@@ -40,36 +50,6 @@ Text Domain: pci
 }
 
 /** CUSTOM POST TYPE */
-body:not(.twentyseventeen-front-page) .entry-content{
-    display: grid;
-    grid-template-columns: repeat( 3, 1fr );    
-    grid-template-rows: repeat(2fr);   
-}
-
-body:not(.twentyseventeen-front-page) .entry-content .post-text{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 4;
-    padding-top: 10px 15px;
-}
-
-body:not(.twentyseventeen-front-page) .entry-content .post-img{
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-body:not(.twentyseventeen-front-page) .entry-content-footer{
-    display: grid;
-    grid-template-columns: repeat( 3, 1fr ); 
-}
-
-body:not(.twentyseventeen-front-page) .entry-content-footer .footer{
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
 
 .entry-content-footer .footer .date-single{
     background-color: #fff;
