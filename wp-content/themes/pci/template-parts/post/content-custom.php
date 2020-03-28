@@ -12,7 +12,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(['article-pci']); ?>>
 	<?php
 	if ( is_sticky() && is_home() ) :
 		echo twentyseventeen_get_svg( array( 'icon' => 'thumb-tack' ) );
@@ -39,10 +39,9 @@
 		</div><!-- .post-thumbnail -->
 	<?php endif; ?>
 
-	<div class="entry-content entry-content-pci">
-		<div class="post-text">
-			<div class="entry-content-meta-container">
-				<div class="entry-content-meta-left">
+	<div class="entry-content entry-content-pci">		
+		<div class="post-text">	
+			<div class="entry-content-meta">							
 				<?php 
 					if ( 'post' === get_post_type() ) {
 						echo '<div class="entry-meta">';
@@ -55,13 +54,9 @@
 						echo '</div><!-- .entry-meta -->';
 					};
 				?>	
+			</div>					
 				</div>
-				<div class="entry-content-meta-right">
-					<h5>
-						<?php echo get_field('data', false, false) ?>
-					</h5>			
-				</div>						
-			</div>			
+			</div>					
 				
 			<?php the_content(  ) ?>		
 			
