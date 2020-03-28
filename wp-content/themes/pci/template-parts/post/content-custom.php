@@ -21,7 +21,7 @@
 	<?php
 
 	if ( is_single() ) {
-		the_title( '<h1 class="entry-title entry-title-pci">', '</h1>' );
+		the_title( '<h1 class="entry-title entry-title-pci">', '</h1>' );	
 	} elseif ( is_front_page() && is_home() ) {
 		the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 	} else {
@@ -46,15 +46,14 @@
 			<li>
 			<?php 
 				if ( 'post' === get_post_type() ) {
-					//echo '<div class="entry-meta">';
 					if ( is_single() ) {
-						twentyseventeen_posted_on();
-					} else {
-						echo 
-						//twentyseventeen_time_link();
-						twentyseventeen_edit_link();
-					};
-					//echo '</div><!-- .entry-meta -->';
+						$catList = get_the_category( get_the_ID() );
+						$categories = [];
+						foreach ($catList as $cat) {
+							$categories[] = $cat->name;
+						}	
+						echo implode(', ', $categories);	
+					}				
 				};
 				?>	
 			</li>
@@ -76,7 +75,7 @@
 	</div><!-- .single-post-container-pci -->
 	<?php
 	if ( is_single() ) {
-		//twentyseventeen_entry_footer();
+		//twentyseventeen_entry_footer();		
 	}
 	?>
 
