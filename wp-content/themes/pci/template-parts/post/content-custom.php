@@ -11,25 +11,23 @@
  */
 
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(['article-pci']); ?>>
 	<?php
 	if ( is_sticky() && is_home() ) :
 		echo twentyseventeen_get_svg( array( 'icon' => 'thumb-tack' ) );
 	endif;
-	?>
-	<header class="entry-header entry-header-pci">
-		<?php
+	?>	
+	<div class="single-post-container-pci">
+	<?php
 
-		if ( is_single() ) {
-			the_title( '<h1 class="entry-title pci-post-title">', '</h1>' );
-		} elseif ( is_front_page() && is_home() ) {
-			the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
-		} else {
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		}
-		?>
-	</header><!-- .entry-header -->
+	if ( is_single() ) {
+		the_title( '<h1 class="entry-title entry-title-pci">', '</h1>' );
+	} elseif ( is_front_page() && is_home() ) {
+		the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
+	} else {
+		the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+	}
+	?>
 
 	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
 		<div class="post-thumbnail">
@@ -39,43 +37,46 @@
 		</div><!-- .post-thumbnail -->
 	<?php endif; ?>
 
-	<div class="entry-content entry-content-pci">		
-		<div class="post-text">	
-			<div class="entry-content-meta">							
-				<?php 
-					if ( 'post' === get_post_type() ) {
-						echo '<div class="entry-meta">';
-						if ( is_single() ) {
-							twentyseventeen_posted_on();
-						} else {
-							echo twentyseventeen_time_link();
-							twentyseventeen_edit_link();
-						};
-						echo '</div><!-- .entry-meta -->';
+	<?php if ( '' !== get_the_post_thumbnail() ) : ?>					
+		<?php the_post_thumbnail( 'twentyseventeen-featured-image', array('class' => 'post-cstm-img') ); ?><!-- .post-thumbnail -->
+	<?php endif; ?>	
+
+	<div class="entry-content entry-content-container-pci">
+		<ul class="entry-content-meta-pci">
+			<li>
+			<?php 
+				if ( 'post' === get_post_type() ) {
+					//echo '<div class="entry-meta">';
+					if ( is_single() ) {
+						twentyseventeen_posted_on();
+					} else {
+						echo 
+						//twentyseventeen_time_link();
+						twentyseventeen_edit_link();
 					};
+					//echo '</div><!-- .entry-meta -->';
+				};
 				?>	
-			</div>					
-				</div>
-			</div>					
-				
-			<?php the_content(  ) ?>		
-			
-			<div class="entry-content-footer"><!-- .entry-content-below -->
-			<div class="footer">
-				<h3 class="date-title"><i class="fa fa-2x fa-calendar"></i>Date</h3>
+			</li>
+			<li>
 				<?php 
 					$dates = explode(",", get_field('data', false, false));				
 					foreach ($dates as $key => $date) {				
-						echo "<span class=\"date-single\">" . $date . "</span>";
+						echo "<span class=\"date-single\">" . $date . "</span><br />";
 					}			
 				?>
-			</div>				
-		</div><!-- .entry-content-footer --> 	
-		</div>
-	</div><!-- .entry-content -->
+			</li>
+		</ul>	
+		<div class="entry-content-pci">
+			<?php the_content(  ) ?>							
+		</div>				
+	</div>					
+				
+								
+	</div><!-- .single-post-container-pci -->
 	<?php
 	if ( is_single() ) {
-		twentyseventeen_entry_footer();
+		//twentyseventeen_entry_footer();
 	}
 	?>
 
