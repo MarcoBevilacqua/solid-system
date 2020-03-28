@@ -10,6 +10,53 @@ Text Domain: pci
 /**
  * TODO: inserire le regole in media query
  */
+
+ @media screen and (min-width: 992px) {
+    .post-cstm-img {
+        max-width: 30vw;
+        position: fixed;
+        top: 10vh;
+        right: 50%;
+        max-height: 90vh;
+        width: auto;
+     }
+
+     .entry-content-pci {
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 9rem;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-shadow: 0 10px 85px -14px rgba(0,0,0,.25);
+        box-shadow: 0 10px 85px -14px rgba(0,0,0,.25);
+        -webkit-transition: opacity,-webkit-transform 80ms ease;
+        transition: opacity,-webkit-transform 80ms ease;
+        transition: opacity,transform 80ms ease;
+        transition: opacity,transform 80ms ease,-webkit-transform 80ms ease;
+     }
+     .entry-content-meta-container{
+         width: 50%;
+     }
+ }
+
+ .post-cstm-img {
+    margin-left: 50px;
+    margin-right: 50px;
+    height: auto;
+    display: block!important;
+ }
+
+ .entry-header.entry-header-pci {
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    transform: translateX(50%);    
+ }
+
+ .entry-header.entry-header-pci h1, 
+ .entry-content-pci .entry-meta {
+     padding-left: 10px;
+ } 
+
 .colors-dark .season-img img {
     -webkit-box-shadow: 1.25rem 1.375rem 2rem 0 rgba(0,0,0,.92);
     -moz-box-shadow: 1.25rem 1.375rem 2rem 0 rgba(0,0,0,.92);
