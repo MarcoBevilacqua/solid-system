@@ -169,6 +169,11 @@ Text Domain: pci
     -webkit-box-shadow: 1.25rem 1.375rem 2rem 0 rgba(0,0,0,.92);
     -moz-box-shadow: 1.25rem 1.375rem 2rem 0 rgba(0,0,0,.92);
     box-shadow: 1.25rem 1.375rem 2rem 0 rgba(0,0,0,.92);
+    box-shadow: 1.25rem 1.375rem 2rem 0 rgba(0,0,0,.92);
+	display: block;
+    max-height: 748px;
+    height: auto;
+    width: auto;	    
 }
 
 .has-header-image .custom-header-media img, .has-header-video .custom-header-media video, .has-header-image:not(.twentyseventeen-front-page):not(.home) .custom-header-media img {
