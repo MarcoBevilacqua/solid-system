@@ -221,24 +221,25 @@ Text Domain: pci
     padding: 15px 10px;
 }
 
-@media screen and (min-width: 30em) {
-    .page-one-column .panel-content .wrap .entry-header .entry-title.pci-section {
-        font-weight: 600;
-        letter-spacing: -5px;
-        font-size: 4.5em;
-        font-family: 'Oswald', sans-serif;
-    }
-}
-
 /** CONTACT-FORM style **/
 .one-half,
 .one-third {
     position: relative;
     margin-right: 4%;
     float: left;
-        margin-bottom: 20px;
- 
+    margin-bottom: 20px; 
 }
+
+/** CONTACT SECTION **/
+.page-one-column .panel-content .wrap .entry-content h2.h-tel {
+    text-align: left;
+    padding-top: 0.4em;
+}    
+
+.page-one-column .panel-content .wrap .entry-content p.tel {
+    color: #f6f3ed;       
+    font-weight: 700; 
+}   
  
 .one-half { width: 48%; }
 .one-third { width: 30.66%; }
@@ -337,10 +338,23 @@ Text Domain: pci
     .page-one-column .panel-content .wrap .entry-content h2 {
         text-align: center;
         margin-bottom: 0;
-    }
+    }   
 
     .page-one-column .panel-content .wrap .entry-header .entry-title{
         font-size: 3em;
     }
 
+    .page-one-column .panel-content .wrap .entry-header .entry-title.pci-section {
+        font-weight: 600;
+        letter-spacing: -5px;
+        font-size: 4.5em;
+        font-family: 'Oswald', sans-serif;
+    }
+
+}
+
+@media screen and (max-width: 30em) {
+    .page-one-column .panel-content .wrap .entry-content h2.h-tel {        
+        margin-bottom: 0.2em;
+    }        
 }
