@@ -191,10 +191,6 @@ Text Domain: pci
     grid-template-columns: 75% auto;
 }
 
-.entry-content .has-very-light-gray-color {
-    text-align: left;
-}
-
 .entry-header.entry-header-pci h1{
     font-size: 3.5em;
 }
